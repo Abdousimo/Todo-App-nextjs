@@ -37,7 +37,7 @@ export default function Home() {
                 className="w-full max-h-[60vh] object-cover"
               />
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex flex-col items-center justify-center z-100">
-                    <div className="w-full max-w-[350px] sm:max-w-[600px] md:max-w-[800px] flex items-center justify-between px-3 py-18">
+                    <div className="w-full max-w-[350px] sm:max-w-[600px] md:max-w-[800px] flex items-center justify-between px-3 mb-6">
                        <h1 className="text-3xl text-white custom">TO DO</h1>
                        <div onClick={()=> setMode(!mode)} className="text-white text-2xl cursor-pointer">
                          {!mode ?  <MdOutlineModeNight size={30}/> : <BsSun size={30}/>}
