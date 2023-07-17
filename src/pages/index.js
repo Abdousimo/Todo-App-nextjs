@@ -44,7 +44,7 @@ export default function Home() {
                        </div>
                     </div>
                     <form onSubmit={handleSubmit} className='h-[6vh] w-full max-w-[350px] sm:max-w-[600px] md:max-w-[800px] flex items-center justify-center gap-4 rounded-lg my-8'>
-                        <input id="input" onChange={(e)=> setItem(e.target.value)} type="text" required placeholder="Add a new todo and Press Enter" className={`h-full w-full pl-3 focus:outline-none bg-transparent text-gray-500 text-xl rounded-lg shadow-lg shadow-gray-300 ${mode ? 'bg-[#2e2c2e] focus:bg-[#2e2c2e] border-2 border-[#2e2c2e]' : 'bg-white focus:bg-white'}`}/>
+                        <input id="input" onChange={(e)=> setItem(e.target.value)} type="text" required placeholder="Add a new todo and Press Enter" className={`h-full w-full pl-3 focus:outline-none  text-gray-500 text-xl rounded-lg shadow-lg shadow-gray-300 ${mode ? 'bg-[#2e2c2e] focus:bg-[#2e2c2e] border-2 border-[#2e2c2e]' : 'bg-white focus:bg-white'}`}/>
                     </form>
                     {/* Show items to user*/ }
                     <Items data={items} setter={setItems} courant={courant} mode={mode}/>
@@ -53,7 +53,7 @@ export default function Home() {
                         <button onClick={()=> setItems(items.filter((item) => item.isComplited === false ))} className={`text-gray-500 texl-2xl ${mode ? 'hover:text-white' : 'hover:text-black'}`}>Clear Complited</button>
                     </div>
                     <div className={mode ? "h-[6vh] w-full max-w-[350px] sm:max-w-[600px] md:max-w-[800px] flex items-center justify-between rounded-lg px-8 text-xl bg-[#2e2c2e] shadow-lg shadow-gray-500"
-                                     :"h-[6vh] w-full max-w-[350px] sm:max-w-[600px] md:max-w-[800px] flex items-center justify-between rounded-lg px-8 text-xl bg-white shadow-lg shadow-gray-300"}>
+                                         : "h-[6vh] w-full max-w-[350px] sm:max-w-[600px] md:max-w-[800px] flex items-center justify-between rounded-lg px-8 text-xl bg-white shadow-lg shadow-gray-300"}>
                       <button onClick={()=> setCourant(1)} className={courant === 1 ? 'text-indigo-600 font-semibold' : 'text-gray-500 font-semibold'}>All</button>
                       <button onClick={()=> setCourant(2)} className={courant === 2 ? 'text-indigo-600 font-semibold' : 'text-gray-500 font-semibold'}>Complited</button>
                       <button onClick={()=> setCourant(3)} className={courant === 3 ? 'text-indigo-600 font-semibold' : 'text-gray-500 font-semibold'}>Active</button>
