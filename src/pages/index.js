@@ -30,13 +30,13 @@ export default function Home() {
           <link rel="icon" href="favicon.ico"/>
         </Head> 
         <section>
-          <div className={mode ? "absolute top-0 left-0 right-0 bottom-0 z-10 w-full bg-[#292729]" : "absolute top-0 left-0 right-0 bottom-0 z-10 w-full"}>
+          <div className={mode ? "absolute top-0 left-0 right-0 bottom-0 z-10 w-full pb-8 bg-[#292729]" : "absolute top-0 left-0 right-0 bottom-0 z-10 w-full pb-8"}>
               <img 
                 src={'https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80'}
                 alt="/"
                 className="w-full max-h-[60vh] object-cover"
               />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex flex-col items-center justify-center z-100 my-10">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex flex-col items-center justify-center z-100 mt-10">
                     <div className="w-full max-w-[350px] sm:max-w-[600px] md:max-w-[800px] flex items-center justify-between px-3 mb-6">
                        <h1 className="text-3xl text-white custom">TO DO</h1>
                        <div onClick={()=> setMode(!mode)} className="text-white text-2xl cursor-pointer">
