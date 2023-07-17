@@ -38,14 +38,14 @@ export default function Home() {
                 className="w-full max-h-[60vh] object-cover"
               />
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex flex-col items-center justify-center z-100">
-                    <div className="w-full max-w-[350px] sm:max-w-[600px] md:max-w-[800px] flex items-center justify-between px-3 py-4">
+                    <div className="w-full max-w-[350px] sm:max-w-[600px] md:max-w-[800px] flex items-center justify-between px-3 pt-32">
                        <h1 className="text-3xl text-white custom">TO DO</h1>
                        <div onClick={()=> setMode(!mode)} className="text-white text-2xl cursor-pointer">
                          {!mode ?  <MdOutlineModeNight size={30}/> : <BsSun size={30}/>}
                        </div>
                     </div>
                     <form onSubmit={handleSubmit} className='h-[6vh] w-full max-w-[350px] sm:max-w-[600px] md:max-w-[800px] flex items-center justify-center gap-4 rounded-lg my-8'>
-                        <input id="input" onChange={(e)=> setItem(e.target.value)} type="text" required placeholder="Add Todo" className={`h-full w-full pl-3 focus:outline-none bg-transparent text-gray-500 text-xl rounded-lg shadow-lg shadow-gray-300 ${mode ? 'bg-[#393139]' : 'bg-white'}`}/>
+                        <input id="input" onChange={(e)=> setItem(e.target.value)} type="text" required placeholder="Add Todo" className={`h-full w-full pl-3 focus:outline-none bg-transparent text-gray-500 text-xl rounded-lg shadow-lg shadow-gray-300 ${mode ? 'bg-[#373237]' : 'bg-white'}`}/>
                         <button type="submit" className="h-full bg-indigo-500 hover:bg-indigo-400 ease-in duration-300 text-center p-3 rounded-lg">
                            <GrAdd size={20} className="text-xl text-white"/>
                         </button>
