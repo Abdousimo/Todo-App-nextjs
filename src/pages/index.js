@@ -31,7 +31,7 @@ export default function Home() {
           <link rel="icon" href="favicon.ico"/>
         </Head> 
         <section>
-          <div className={mode ? "absolute top-0 left-0 right-0 bottom-0 z-10 w-full bg-[#292729]" : "absolute top-0 left-0 right-0 bottom-0 z-10 w-full py-32"}>
+          <div className={mode ? "absolute top-0 left-0 right-0 bottom-0 z-10 w-full bg-[#292729]" : "absolute top-0 left-0 right-0 bottom-0 z-10 w-full"}>
               <img 
                 src={'https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80'}
                 alt="/"
@@ -53,8 +53,8 @@ export default function Home() {
                         <h1 className="text-gray-500 texl-xl"><span className="p-2 text-2xl">{items.length}</span>items left</h1>
                         <button onClick={()=> setItems(items.filter((item) => item.isComplited === false ))} className={`text-gray-500 texl-2xl ${mode ? 'hover:text-white' : 'hover:text-black'}`}>Clear Complited</button>
                     </div>
-                    <div className={mode ? "h-[6vh] w-full max-w-[350px] sm:max-w-[600px] md:max-w-[800px] flex items-center justify-between rounded-lg px-8 text-xl bg-[#2e2c2e] shadow-lg shadow-gray-500"
-                                     :"h-[6vh] w-full max-w-[350px] sm:max-w-[600px] md:max-w-[800px] flex items-center justify-between rounded-lg px-8 text-xl bg-white shadow-lg shadow-gray-300"}>
+                    <div className={mode ? "h-[6vh] w-full max-w-[350px] sm:max-w-[600px] md:max-w-[800px] flex items-center justify-between rounded-lg px-8 text-xl bg-[#2e2c2e] shadow-lg shadow-gray-500 my-8"
+                                     :"h-[6vh] w-full max-w-[350px] sm:max-w-[600px] md:max-w-[800px] flex items-center justify-between rounded-lg px-8 text-xl bg-white shadow-lg shadow-gray-300 my-8"}>
                       <button onClick={()=> setCourant(1)} className={courant === 1 ? 'text-indigo-600 font-semibold' : 'text-gray-500 font-semibold'}>All</button>
                       <button onClick={()=> setCourant(2)} className={courant === 2 ? 'text-indigo-600 font-semibold' : 'text-gray-500 font-semibold'}>Complited</button>
                       <button onClick={()=> setCourant(3)} className={courant === 3 ? 'text-indigo-600 font-semibold' : 'text-gray-500 font-semibold'}>Active</button>
