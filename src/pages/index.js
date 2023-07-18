@@ -34,17 +34,18 @@ export default function Home() {
               <img 
                 src={'https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80'}
                 alt="/"
-                className="w-full max-h-[60vh] object-cover"
+                className="w-full max-h-[70vh] object-cover"
               />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex flex-col items-center justify-center z-100">
+              <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/3 w-full flex flex-col items-center justify-center z-100 '>
                     <div className="w-full max-w-[350px] sm:max-w-[600px] md:max-w-[800px] flex items-center justify-between px-3 mb-6">
                        <h1 className="text-3xl text-white">TO DO</h1>
                        <div onClick={()=> setMode(!mode)} className="text-white text-2xl cursor-pointer">
                          {!mode ?  <MdOutlineModeNight size={30}/> : <BsSun size={30}/>}
                        </div>
                     </div>
+                  
                     <form onSubmit={handleSubmit} className='h-[6vh] w-full max-w-[350px] sm:max-w-[600px] md:max-w-[800px] flex items-center justify-center rounded-lg mb-4'>
-                        <input id="input" onChange={(e)=> setItem(e.target.value)} type="text" required placeholder="Add a new todo and Press Enter" className={`h-full w-full pl-3 focus:outline-none  text-gray-500 text-xl rounded-lg shadow-lg shadow-gray-300 ${mode ? 'bg-[#2e2c2e] focus:bg-[#2e2c2e] border-2 border-[#2e2c2e]' : 'bg-white focus:bg-white'}`}/>
+                        <input id="input" onChange={(e)=> setItem(e.target.value)} type="text" required placeholder="Add a new todo and Press Enter" className={`h-full w-full pl-3 focus:outline-none  text-gray-500 text-md rounded-lg shadow-lg shadow-gray-300 ${mode ? 'bg-[#2e2c2e] focus:bg-[#2e2c2e] border-2 border-[#2e2c2e]' : 'bg-white focus:bg-white'}`}/>
                     </form>
                     {/* Show items to user*/ }
                     <Items data={items} setter={setItems} courant={courant} mode={mode}/>
@@ -52,13 +53,16 @@ export default function Home() {
                         <h1 className="text-gray-500 texl-xl"><span className="p-2 text-2xl">{items.length}</span>items left</h1>
                         <button onClick={()=> setItems(items.filter((item) => item.isComplited === false ))} className={`text-gray-500 texl-2xl ${mode ? 'hover:text-white' : 'hover:text-black'}`}>Clear Complited</button>
                     </div>
-                    <div className={mode ? "h-[6vh] w-full max-w-[350px] sm:max-w-[600px] md:max-w-[800px] flex items-center justify-between rounded-lg px-8 text-xl bg-[#2e2c2e] shadow-lg shadow-gray-500"
+                    <div className={`w-full flex justify-center items-center p-5 ${mode ? 'bg-[#2e2c2e]' : 'bg-white'}`}>
+                        <div className={mode ? "h-[6vh] w-full max-w-[350px] sm:max-w-[600px] md:max-w-[800px] flex items-center justify-between rounded-lg px-8 text-xl bg-[#2e2c2e] shadow-lg shadow-gray-500"
                                          : "h-[6vh] w-full max-w-[350px] sm:max-w-[600px] md:max-w-[800px] flex items-center justify-between rounded-lg px-8 text-xl bg-white shadow-lg shadow-gray-300"}>
-                      <button onClick={()=> setCourant(1)} className={courant === 1 ? 'text-indigo-600 font-semibold' : 'text-gray-500 font-semibold'}>All</button>
-                      <button onClick={()=> setCourant(2)} className={courant === 2 ? 'text-indigo-600 font-semibold' : 'text-gray-500 font-semibold'}>Complited</button>
-                      <button onClick={()=> setCourant(3)} className={courant === 3 ? 'text-indigo-600 font-semibold' : 'text-gray-500 font-semibold'}>Active</button>
-                    </div>
-              </div>
+                           <button onClick={()=> setCourant(1)} className={courant === 1 ? 'text-indigo-600' : 'text-gray-500'}>All</button>
+                           <button onClick={()=> setCourant(2)} className={courant === 2 ? 'text-indigo-600' : 'text-gray-500'}>Complited</button>
+                           <button onClick={()=> setCourant(3)} className={courant === 3 ? 'text-indigo-600' : 'text-gray-500'}>Active</button>
+                        </div>
+                      </div>
+                  </div>
+             
             </div>
           </section>
     </section>
