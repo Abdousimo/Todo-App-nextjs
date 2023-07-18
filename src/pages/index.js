@@ -49,11 +49,11 @@ export default function Home() {
                     </form>
                     {/* Show items to user*/ }
                     <Items data={items} setter={setItems} courant={courant} mode={mode}/>
-                    <div className={`w-full h-10 max-w-[350px] sm:max-w-[600px] md:max-w-[800px] px-4 py-8 flex items-center justify-between rounded-b-lg shadow-lg mb-8 border-t-2 border-gray-400 ${mode ? 'bg-[#2e2c2e] shadow-gray-500' : 'bg-white shadow-gray-300'}`}>
+                    <div className={`w-full h-10 max-w-[350px] sm:max-w-[600px] md:max-w-[800px] px-4 flex items-center justify-between rounded-b-lg shadow-lg mb-8 border-t-2 border-gray-400 ${mode ? 'bg-[#2e2c2e] shadow-gray-500' : 'bg-white shadow-gray-300'}`}>
                         <h1 className="text-gray-500 texl-xl"><span className="p-2 text-2xl">{items.length}</span>items left</h1>
                         <button onClick={()=> setItems(items.filter((item) => item.isComplited === false ))} className={`text-gray-500 texl-2xl ${mode ? 'hover:text-white' : 'hover:text-black'}`}>Clear Complited</button>
                     </div>
-                    <div className={`w-full flex justify-center items-center p-5 ${mode ? 'bg-[#2e2c2e]' : 'bg-white'}`}>
+                    <div className={`w-full flex justify-center items-center py-5 ${mode ? 'bg-[#2e2c2e]' : 'bg-white'}`}>
                         <div className={mode ? "h-[6vh] w-full max-w-[350px] sm:max-w-[600px] md:max-w-[800px] flex items-center justify-between rounded-lg px-8 text-xl bg-[#2e2c2e] shadow-lg shadow-gray-500"
                                          : "h-[6vh] w-full max-w-[350px] sm:max-w-[600px] md:max-w-[800px] flex items-center justify-between rounded-lg px-8 text-xl bg-white shadow-lg shadow-gray-300"}>
                            <button onClick={()=> setCourant(1)} className={courant === 1 ? 'text-indigo-600' : 'text-gray-500'}>All</button>
