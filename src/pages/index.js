@@ -36,14 +36,14 @@ export default function Home() {
                 alt="/"
                 className="w-full max-h-[60vh] object-cover"
               />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex flex-col items-center justify-center z-100 mt-10 pb-10">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex flex-col items-center justify-center z-100 mt-10 py-10">
                     <div className="w-full max-w-[350px] sm:max-w-[600px] md:max-w-[800px] flex items-center justify-between px-3 mb-6">
                        <h1 className="text-3xl text-white custom">TO DO</h1>
                        <div onClick={()=> setMode(!mode)} className="text-white text-2xl cursor-pointer">
                          {!mode ?  <MdOutlineModeNight size={30}/> : <BsSun size={30}/>}
                        </div>
                     </div>
-                    <form onSubmit={handleSubmit} className='h-[6vh] w-full max-w-[350px] sm:max-w-[600px] md:max-w-[800px] flex items-center justify-center rounded-lg mb-6'>
+                    <form onSubmit={handleSubmit} className='h-[6vh] w-full max-w-[350px] sm:max-w-[600px] md:max-w-[800px] flex items-center justify-center rounded-lg mb-4'>
                         <input id="input" onChange={(e)=> setItem(e.target.value)} type="text" required placeholder="Add a new todo and Press Enter" className={`h-full w-full pl-3 focus:outline-none  text-gray-500 text-xl rounded-lg shadow-lg shadow-gray-300 ${mode ? 'bg-[#2e2c2e] focus:bg-[#2e2c2e] border-2 border-[#2e2c2e]' : 'bg-white focus:bg-white'}`}/>
                     </form>
                     {/* Show items to user*/ }
