@@ -17,7 +17,7 @@ const  Items = ({data,setter,courant,mode}) => {
   }
 
     return (
-        <section className={`h-[50vh] w-full max-w-[350px] sm:max-w-[600px] md:max-w-[800px] overflow-auto rounded-t-lg py-5 ${mode ? 'bg-[#2e2c2e]' : 'bg-white'}`}>
+        <section className={`h-[50vh] w-full max-w-[350px] sm:max-w-[600px] md:max-w-[800px] overflow-auto rounded-t-lg ${mode ? 'bg-[#2e2c2e]' : 'bg-white'}`}>
                 {  data.map((item,index) => (
                     <div key={index} className='w-full h-10 px-4 py-8 flex items-center justify-between border-b-2'>
                         <div className='flex text-center gap-8'>
