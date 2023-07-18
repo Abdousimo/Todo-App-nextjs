@@ -30,7 +30,7 @@ export default function Home() {
           <link rel="icon" href="favicon.ico"/>
         </Head> 
         <section>
-          <div className={mode ? "absolute top-0 left-0 right-0 bottom-0 z-10 w-full bg-[#5b475b] m-0 p-0" : "absolute top-0 left-0 right-0 bottom-0 z-10 w-full m-0 p-0"}>
+          <div className={mode ? "absolute top-0 left-0 right-0 bottom-0 z-10 w-full bg-[#2e2c2e] m-0 p-0" : "absolute top-0 left-0 right-0 bottom-0 z-10 w-full m-0 p-0"}>
               <img 
                 src={'https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80'}
                 alt="/"
